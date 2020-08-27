@@ -13,7 +13,7 @@ class TestPrometheusExporter(unittest.TestCase):
         
     def test_uptime(self):
         uptime = self.prom.registry.get_sample_value('uptime', {'node': 'Node1'})
-        self.assertEqual(uptime, 576.0)
+        self.assertEqual(uptime, 2989.0)
 
     def test_transaction_ledger_count(self):
         ledger = self.prom.registry.get_sample_value('transaction_count', {'node': 'Node1', 'ledger': 'ledger'})
@@ -29,11 +29,11 @@ class TestPrometheusExporter(unittest.TestCase):
 
     def test_transaction_audit_count(self):
         audit = self.prom.registry.get_sample_value('transaction_count', {'node':'Node1','ledger':'audit'})
-        self.assertEqual(audit, 3)
+        self.assertEqual(audit, 504.0)
 
     def test_read_transactions(self):
         read_transaction = self.prom.registry.get_sample_value('transaction_rate', {'node': 'Node1', 'mode': 'read'})
-        self.assertEqual(read_transaction, 0.0606915686)
+        self.assertEqual(read_transaction, 0.0378006748)
 
     def test_write_transactions(self):
         write_transaction = self.prom.registry.get_sample_value('transaction_rate', {'node': 'Node1', 'mode': 'write'})
@@ -41,7 +41,7 @@ class TestPrometheusExporter(unittest.TestCase):
 
     def test_master_throughput(self):
         master_throughput = self.prom.registry.get_sample_value('throughput', {'node': 'Node1'})
-        self.assertEqual(master_throughput, 42.7)
+        self.assertEqual(master_throughput, 0.0)
         
 if __name__ == '__main__':
     unittest.main()

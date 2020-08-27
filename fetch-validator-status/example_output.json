@@ -1,13 +1,24 @@
-{
-    "Node1": {
+[
+  {
+    "name": "Node1",
+    "status": {
+      "ok": true,
+      "uptime": "0:49:49",
+      "timestamp": 1598535440,
+      "software": {
+        "indy-node": "1.12.3",
+        "sovrin": "unknown"
+      }
+    },
+    "response": {
       "op": "REPLY",
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1594622115703491000,
+        "reqId": 1598535440135058100,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1594622115,
+          "timestamp": 1598535440,
           "Hardware": {
             "HDD_used_by_node": "0 MBs"
           },
@@ -58,8 +69,8 @@
               "Lambda": 240,
               "Omega": 20,
               "instances started": {
-                "0": 39658.680210648,
-                "1": 39658.683093748
+                "0": 2344.953244942,
+                "1": 2344.955627542
               },
               "ordered request counts": {
                 "0": 0,
@@ -78,24 +89,24 @@
                 "0": 0.0,
                 "1": 0.0
               },
-              "master throughput": 42.7,
+              "master throughput": null,
               "total requests": 0,
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0606915686,
+                "read-transactions": 0.0378006748,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 3
+                "audit": 504
               },
-              "uptime": 576
+              "uptime": 2989
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'GoE282BykcqZQv3C8R9LGES2uLjvmch57CPBaGCt3iwY'",
+              "3": "b'42btZ7RcYABWbazMsyosMgDGFeNYdnMuFZPg3yNZ9yEY'",
               "0": "b'CWbmNc4UzKyiZAxzPnwQYt6WLoxe4Mc481aw1P5PwV51'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -155,11 +166,11 @@
               },
               "Last_txn_3PC_keys": {
                 "3": {
-                  "Node3": [
+                  "Node4": [
                     null,
                     null
                   ],
-                  "Node4": [
+                  "Node2": [
                     null,
                     null
                   ]
@@ -169,44 +180,26 @@
                     null,
                     null
                   ],
-                  "Node4": [
-                    null,
-                    null
-                  ]
-                },
-                "2": {
-                  "Node3": [
-                    null,
-                    null
-                  ],
                   "Node2": [
                     null,
                     null
                   ]
                 },
-                "1": {
-                  "Node2": [
-                    null,
-                    null
-                  ],
-                  "Node3": [
-                    null,
-                    null
-                  ]
-                }
+                "2": {},
+                "1": {}
               }
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2020-07-13 06:30:41+00:00",
+                "Last_updated_time": "2020-08-27 13:32:40+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2020-07-13 06:30:41+00:00",
+                "Last_updated_time": "2020-08-27 13:32:40+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2020-07-13 06:30:41+00:00",
+                "Last_updated_time": "2020-08-27 13:32:40+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -218,10 +211,10 @@
             "Replicas_status": {
               "Node1:0": {
                 "Primary": "Node1:0",
-                "Watermarks": "0:300",
+                "Watermarks": "500:800",
                 "Last_ordered_3PC": [
                   0,
-                  3
+                  504
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -313,7 +306,7 @@
             "indy-node": "1.12.3",
             "sovrin": "unknown"
           },
-          "Update_time": "Monday, July 13, 2020 6:35:15 AM +0000",
+          "Update_time": "Thursday, August 27, 2020 1:37:20 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
@@ -330,16 +323,28 @@
           }
         }
       }
+    }
+  },
+  {
+    "name": "Node2",
+    "status": {
+      "ok": true,
+      "uptime": "0:49:49",
+      "timestamp": 1598535440,
+      "software": {
+        "indy-node": "1.12.3",
+        "sovrin": "unknown"
+      }
     },
-    "Node2": {
+    "response": {
       "op": "REPLY",
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1594622115703491000,
+        "reqId": 1598535440135058100,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1594622115,
+          "timestamp": 1598535440,
           "Hardware": {
             "HDD_used_by_node": "0 MBs"
           },
@@ -390,8 +395,8 @@
               "Lambda": 240,
               "Omega": 20,
               "instances started": {
-                "0": 39658.364149648,
-                "1": 39658.368147048
+                "0": 2344.869952142,
+                "1": 2344.872335342
               },
               "ordered request counts": {
                 "0": 0,
@@ -415,19 +420,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0641360615,
+                "read-transactions": 0.0384681952,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 3
+                "audit": 504
               },
-              "uptime": 576
+              "uptime": 2989
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'GoE282BykcqZQv3C8R9LGES2uLjvmch57CPBaGCt3iwY'",
+              "3": "b'42btZ7RcYABWbazMsyosMgDGFeNYdnMuFZPg3yNZ9yEY'",
               "0": "b'CWbmNc4UzKyiZAxzPnwQYt6WLoxe4Mc481aw1P5PwV51'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -491,7 +496,7 @@
                     null,
                     null
                   ],
-                  "Node1": [
+                  "Node3": [
                     null,
                     null
                   ]
@@ -506,39 +511,21 @@
                     null
                   ]
                 },
-                "2": {
-                  "Node4": [
-                    null,
-                    null
-                  ],
-                  "Node1": [
-                    null,
-                    null
-                  ]
-                },
-                "1": {
-                  "Node3": [
-                    null,
-                    null
-                  ],
-                  "Node1": [
-                    null,
-                    null
-                  ]
-                }
+                "2": {},
+                "1": {}
               }
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2020-07-13 06:30:41+00:00",
+                "Last_updated_time": "2020-08-27 13:32:40+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2020-07-13 06:30:41+00:00",
+                "Last_updated_time": "2020-08-27 13:32:40+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2020-07-13 06:30:41+00:00",
+                "Last_updated_time": "2020-08-27 13:32:40+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -550,10 +537,10 @@
             "Replicas_status": {
               "Node2:0": {
                 "Primary": "Node1:0",
-                "Watermarks": "0:300",
+                "Watermarks": "500:800",
                 "Last_ordered_3PC": [
                   0,
-                  3
+                  504
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -645,7 +632,7 @@
             "indy-node": "1.12.3",
             "sovrin": "unknown"
           },
-          "Update_time": "Monday, July 13, 2020 6:35:15 AM +0000",
+          "Update_time": "Thursday, August 27, 2020 1:37:20 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
@@ -662,16 +649,28 @@
           }
         }
       }
+    }
+  },
+  {
+    "name": "Node3",
+    "status": {
+      "ok": true,
+      "uptime": "0:49:49",
+      "timestamp": 1598535440,
+      "software": {
+        "indy-node": "1.12.3",
+        "sovrin": "unknown"
+      }
     },
-    "Node3": {
+    "response": {
       "op": "REPLY",
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1594622115703491000,
+        "reqId": 1598535440135058100,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1594622115,
+          "timestamp": 1598535440,
           "Hardware": {
             "HDD_used_by_node": "0 MBs"
           },
@@ -722,8 +721,8 @@
               "Lambda": 240,
               "Omega": 20,
               "instances started": {
-                "0": 39658.690182648,
-                "1": 39658.693642448
+                "0": 2344.932197442,
+                "1": 2344.934254842
               },
               "ordered request counts": {
                 "0": 0,
@@ -747,19 +746,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0676266229,
+                "read-transactions": 0.0341205841,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 3
+                "audit": 504
               },
-              "uptime": 576
+              "uptime": 2989
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'GoE282BykcqZQv3C8R9LGES2uLjvmch57CPBaGCt3iwY'",
+              "3": "b'42btZ7RcYABWbazMsyosMgDGFeNYdnMuFZPg3yNZ9yEY'",
               "0": "b'CWbmNc4UzKyiZAxzPnwQYt6WLoxe4Mc481aw1P5PwV51'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -819,58 +818,40 @@
               },
               "Last_txn_3PC_keys": {
                 "3": {
-                  "Node1": [
+                  "Node2": [
                     null,
                     null
                   ],
-                  "Node2": [
+                  "Node1": [
                     null,
                     null
                   ]
                 },
                 "0": {
-                  "Node2": [
+                  "Node1": [
                     null,
                     null
                   ],
-                  "Node1": [
+                  "Node2": [
                     null,
                     null
                   ]
                 },
-                "2": {
-                  "Node2": [
-                    null,
-                    null
-                  ],
-                  "Node4": [
-                    null,
-                    null
-                  ]
-                },
-                "1": {
-                  "Node2": [
-                    null,
-                    null
-                  ],
-                  "Node1": [
-                    null,
-                    null
-                  ]
-                }
+                "2": {},
+                "1": {}
               }
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2020-07-13 06:30:41+00:00",
+                "Last_updated_time": "2020-08-27 13:32:40+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2020-07-13 06:30:41+00:00",
+                "Last_updated_time": "2020-08-27 13:32:40+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2020-07-13 06:30:41+00:00",
+                "Last_updated_time": "2020-08-27 13:32:40+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -882,10 +863,10 @@
             "Replicas_status": {
               "Node3:0": {
                 "Primary": "Node1:0",
-                "Watermarks": "0:300",
+                "Watermarks": "500:800",
                 "Last_ordered_3PC": [
                   0,
-                  3
+                  504
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -977,7 +958,7 @@
             "indy-node": "1.12.3",
             "sovrin": "unknown"
           },
-          "Update_time": "Monday, July 13, 2020 6:35:15 AM +0000",
+          "Update_time": "Thursday, August 27, 2020 1:37:20 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
@@ -994,16 +975,28 @@
           }
         }
       }
+    }
+  },
+  {
+    "name": "Node4",
+    "status": {
+      "ok": true,
+      "uptime": "0:49:49",
+      "timestamp": 1598535440,
+      "software": {
+        "indy-node": "1.12.3",
+        "sovrin": "unknown"
+      }
     },
-    "Node4": {
+    "response": {
       "op": "REPLY",
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1594622115703491000,
+        "reqId": 1598535440135058100,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1594622115,
+          "timestamp": 1598535440,
           "Hardware": {
             "HDD_used_by_node": "0 MBs"
           },
@@ -1054,8 +1047,8 @@
               "Lambda": 240,
               "Omega": 20,
               "instances started": {
-                "0": 39658.582874148,
-                "1": 39658.586160048
+                "0": 2344.792615442,
+                "1": 2344.795710242
               },
               "ordered request counts": {
                 "0": 0,
@@ -1079,19 +1072,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0641512402,
+                "read-transactions": 0.0361261021,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 3
+                "audit": 504
               },
-              "uptime": 576
+              "uptime": 2989
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'GoE282BykcqZQv3C8R9LGES2uLjvmch57CPBaGCt3iwY'",
+              "3": "b'42btZ7RcYABWbazMsyosMgDGFeNYdnMuFZPg3yNZ9yEY'",
               "0": "b'CWbmNc4UzKyiZAxzPnwQYt6WLoxe4Mc481aw1P5PwV51'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -1151,11 +1144,11 @@
               },
               "Last_txn_3PC_keys": {
                 "3": {
-                  "Node2": [
+                  "Node3": [
                     null,
                     null
                   ],
-                  "Node1": [
+                  "Node2": [
                     null,
                     null
                   ]
@@ -1165,44 +1158,26 @@
                     null,
                     null
                   ],
-                  "Node1": [
+                  "Node3": [
                     null,
                     null
                   ]
                 },
-                "2": {
-                  "Node2": [
-                    null,
-                    null
-                  ],
-                  "Node1": [
-                    null,
-                    null
-                  ]
-                },
-                "1": {
-                  "Node2": [
-                    null,
-                    null
-                  ],
-                  "Node1": [
-                    null,
-                    null
-                  ]
-                }
+                "2": {},
+                "1": {}
               }
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2020-07-13 06:30:41+00:00",
+                "Last_updated_time": "2020-08-27 13:32:40+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2020-07-13 06:30:41+00:00",
+                "Last_updated_time": "2020-08-27 13:32:40+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2020-07-13 06:30:41+00:00",
+                "Last_updated_time": "2020-08-27 13:32:40+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -1214,10 +1189,10 @@
             "Replicas_status": {
               "Node4:0": {
                 "Primary": "Node1:0",
-                "Watermarks": "0:300",
+                "Watermarks": "500:800",
                 "Last_ordered_3PC": [
                   0,
-                  3
+                  504
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -1309,7 +1284,7 @@
             "indy-node": "1.12.3",
             "sovrin": "unknown"
           },
-          "Update_time": "Monday, July 13, 2020 6:35:15 AM +0000",
+          "Update_time": "Thursday, August 27, 2020 1:37:20 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
@@ -1328,3 +1303,4 @@
       }
     }
   }
+]

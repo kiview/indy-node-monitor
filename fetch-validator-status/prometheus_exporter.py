@@ -22,11 +22,11 @@ class PrometheusExporter():
         start_http_server(self.port, registry=self.registry)
 
     def update(self, metrics):
-        for node_name, data in metrics.items():
-            self._update_metrics_for_node(data)
+        # TODO: update for all nodes
+        self._update_metrics_for_node(metrics[0])
 
     def _update_metrics_for_node(self, node):
-        node_info = node['result']['data']['Node_info']
+        node_info = node['response']['result']['data']['Node_info']
         name = node_info['Name']
 
         uptime = node_info['Metrics']['uptime']

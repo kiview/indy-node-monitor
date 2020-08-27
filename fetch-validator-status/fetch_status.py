@@ -18,6 +18,7 @@ from indy_vdr.ledger import (
     Request,
 )
 from indy_vdr.pool import open_pool
+from prometheus_exporter import PrometheusExporter
 
 
 verbose = False
@@ -48,7 +49,7 @@ def seed_as_bytes(seed):
     return seed.encode("ascii")
 
 
-async def fetch_status(genesis_path: str, nodes: str = None, ident: DidKey = None, status_only: bool = False):
+async def fetch_status(genesis_path: str, nodes: str = None, ident: DidKey = None, status_only: bool = False, prom = None):
     pool = await open_pool(transactions_path=genesis_path)
     result = []
 
@@ -100,6 +101,7 @@ async def fetch_status(genesis_path: str, nodes: str = None, ident: DidKey = Non
         await merge_package_mismatch_info(result, packages)
 
     print(json.dumps(result, indent=2))
+    prom.update(result)
 
 
 async def get_primary_name(jsval: any, node: str) -> str:
@@ -283,5 +285,8 @@ if __name__ == "__main__":
         log("DID:", ident.did, " Verkey:", ident.verkey)
     else:
         ident = None
+    
+    prom = PrometheusExporter(8000)
+    prom.start()
 
-    asyncio.get_event_loop().run_until_complete(fetch_status(args.genesis_path, args.nodes, ident, args.status))
+    asyncio.get_event_loop().run_until_complete(fetch_status(args.genesis_path, args.nodes, ident, args.status, prom))
